@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 
 function Header() {
@@ -10,9 +11,9 @@ function Header() {
                 <p>Welcome, {name}</p>
             </div>
             <div>
-                <p>Dashboard</p>
-                <p>Add Expense</p>
-                <p>Charts</p>
+                <Link to={"/"}>Dashboard</Link>
+                <Link to={"/add-expense"}>Add Expense</Link>
+                <Link to={"/charts"}>Charts</Link>
             </div>
         </div>
     )

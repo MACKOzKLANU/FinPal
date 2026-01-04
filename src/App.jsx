@@ -5,6 +5,7 @@ import AuthLayout from './components/auth/AuthLayout'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ProtectedLayout from './components/layout/ProtectedLayout'
 import Dashboard from './components/dashboard/Dashboard'
+import AddExpense from './components/dashboard/AddExpense'
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route element={<ProtectedLayout></ProtectedLayout>}>
           <Route path="/" element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard></Dashboard>}></Route>
+          <Route path="add-expense" element={<AddExpense></AddExpense>}></Route>
         </Route>
 
       </Routes>
