@@ -1,0 +1,15 @@
+.logo {
+    width: 5rem;
+    height: 5rem;
+    background-color: green;
+    -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
+    mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
+}
+
+.walletIcon {
+    width: 2rem;
+    height: 2rem;
+    background-color: whitesmoke;
+    -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
+    mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
+}
