@@ -5,6 +5,13 @@ import App from './App.jsx'
 import { AuthProvider } from './contexts/AuthContext.jsx'
 import { BudgetProvider } from './contexts/BudgetContext.jsx'
 
+
+// Custom css styles
+
+import './styles/components/AuthLayout.css'
+
+import './styles/globals/variables.css'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>

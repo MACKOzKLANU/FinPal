@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import '../../styles/components/LoginForm.css'
 
 function LoginForm() {
     const {name, email, password, errors, token, setName, setEmail, setPassword, setErrors, login} = useAuth();
@@ -16,10 +17,10 @@ function LoginForm() {
         }
     }
     return (
-        <div>
+        <div className="">
             <h4>Welcome back</h4>
             <p>Sign in to your account</p>
-            <div>
+            <div className="">
                 <form onSubmit={handleLogin}>
                     <label htmlFor="email">Email</label>
                     <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name="" id="" />

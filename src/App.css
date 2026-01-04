@@ -1,7 +1,11 @@
+body {
+    background-color: #0e1111;
+}
 .logo {
     width: 5rem;
     height: 5rem;
-    background-color: green;
+    background-color: var(--color-logo);
+
     -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
     mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
 }
@@ -12,4 +16,12 @@
     background-color: whitesmoke;
     -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
     mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
+}
+
+.color-logo {
+    color: var(--color-logo);
+}
+
+.ml-10 {
+    margin-left: 10px;
 }
