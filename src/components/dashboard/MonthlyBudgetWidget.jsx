@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useBudget } from "../../contexts/BudgetContext";
 
 function MonthlyBudgetWidget() {
-    const { monthlyBudget, setMonthlyBudget, remainingBudget, setRemainingBudget } = useBudget();
+    const { monthlyBudget, expenses, setMonthlyBudget, remainingBudget, setRemainingBudget } = useBudget();
 
     const [showInput, setShowInput] = useState(false)
     const [inputAmount, setInputAmount] = useState(0);
@@ -21,7 +21,13 @@ function MonthlyBudgetWidget() {
         }
         else {
             setMonthlyBudget(inputAmount);
+            if(remainingBudget != 0) {
+                setRemainingBudget(inputAmount - expenses)
+            }
+            else {
             setRemainingBudget(inputAmount);
+
+            }
             
             handleChangeAmmount();
         }
