@@ -22,10 +22,12 @@ export const BudgetProvider = ( { children }) => {
         }
         const validationResult = validateExpense(amount);
         if(validationResult.ok) {
+            console.log(remainingBudget)
+            console.log(remainingBudget - 20)
             setExpensesList([...expensesList, expense]);
-            setExpenses(expenses + amount);
+            setExpenses(expenses + parseInt(amount));
             setTransactionsCount(transactionsCount + 1);
-            setRemainingBudget(remainingBudget - amount);
+            setRemainingBudget(remainingBudget - parseInt(amount));
 
             console.log(expense);
 
@@ -38,7 +40,7 @@ export const BudgetProvider = ( { children }) => {
             ))
             return {success: false};
         }
-    }, []);
+    }, [remainingBudget]);
 
     const value = {
         // state

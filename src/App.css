@@ -4,7 +4,7 @@ body {
 .logo {
     width: 5rem;
     height: 5rem;
-    background-color: var(--color-logo);
+    background-color: #10B981;
 
     -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
     mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
@@ -13,11 +13,11 @@ body {
 .walletIcon {
     width: 2rem;
     height: 2rem;
-    background-color: whitesmoke;
+    background-color: #10B981;
     -webkit-mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain; 
     mask: url('/src/assets/wallet-icon.svg') no-repeat center / contain;
 }
 
 .color-logo {
-    color: var(--color-logo);
+    color: #10B981;
 }

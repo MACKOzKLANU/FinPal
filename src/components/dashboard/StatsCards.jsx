@@ -3,16 +3,16 @@ import { useBudget } from "../../contexts/BudgetContext";
 function StatsCards() {
     const { expenses, remainingBudget, transactionsCount } = useBudget();
     return (
-        <div>
-            <div>
+        <div className="d-flex gap-5">
+            <div className="card">
                 <p>Total expenses</p>
-                <p>$ ${expenses}</p>
+                <p> ${expenses}</p>
             </div>
-            <div>
+            <div className="card">
                 <p>Remaining Budget</p>
                 <p>^ ${remainingBudget}</p>
             </div>
-            <div>
+            <div className="card">
                 <p>Total Transactions</p>
                 <p>{transactionsCount}</p>
             </div>

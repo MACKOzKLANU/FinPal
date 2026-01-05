@@ -6,18 +6,26 @@ function RecentExpenses() {
         <div>
             <p>Recent Expenses</p>
             <p>Your latest transactions</p>
-            <div>
-                {expensesList ? 
-                expensesList.map((expense, index) => (
-                    <div>
-                        <p>{expense.title}</p>
-                        <p>{expense.amount}</p>
-                        <p>{expense.date}</p>
-                        <p>{expense.category}</p>
-                        <p>{expense.description}</p>
-                    </div>
-                ))
-                : <p>No expenses yet. Start tracking your spending!</p>}
+            <div className="card">
+                {expensesList ?
+                    expensesList.map((expense, index) => (
+                        <div key={index} className="d-flex flex-row mb-3">
+                            <div className="d-flex flex-col ">
+                                <div>
+                                    <p>{expense.title}</p>
+                                    <p className="text-success">{expense.category}</p>
+                                    <p>{expense.date}</p>
+                                </div>
+                                <div>
+                                    <p>{expense.amount} $</p>
+                                </div>
+                            </div>
+                            <div className="d-flex">
+                                <p>{expense.description}</p>
+                            </div>
+                        </div>
+                    ))
+                    : <p>No expenses yet. Start tracking your spending!</p>}
             </div>
         </div>
     )

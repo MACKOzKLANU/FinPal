@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ProtectedLayout from './components/layout/ProtectedLayout'
 import Dashboard from './components/dashboard/Dashboard'
 import AddExpense from './components/dashboard/AddExpense'
+import Charts from './components/dashboard/Charts'
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard></Dashboard>}></Route>
           <Route path="add-expense" element={<AddExpense></AddExpense>}></Route>
+          <Route path="charts" element={<Charts></Charts>}></Route>
         </Route>
 
       </Routes>

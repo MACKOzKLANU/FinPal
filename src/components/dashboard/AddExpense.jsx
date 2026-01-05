@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useBudget } from "../../contexts/BudgetContext";
+import { useNavigate } from "react-router-dom";
 
 function AddExpense() {
     const { monthlyBudget, remainingBudget, expenses, transactionsCount, expensesList, setMonthlyBudger, setRemainingBudget, setExpenses, setTransactionsCount, setExpensesList, addExpense} = useBudget();
@@ -8,9 +9,12 @@ function AddExpense() {
     const [date, setDate] = useState("");
     const [category, setCategory] = useState("food");
     const [description, setDescription] = useState("");
+
+    const navigate = useNavigate();
     const handleAddExpense = (e) => {
         e.preventDefault();
         addExpense(title, amount, date, category, description)
+        navigate("/")
 
     }
 
@@ -27,16 +31,16 @@ function AddExpense() {
                 <p>Fill in the details of your expense</p>
             </div>
 
-            <form onReset={handleReset} onSubmit={handleAddExpense}>
+            <form className="pb-2" onReset={handleReset} onSubmit={handleAddExpense}>
                 <label htmlFor="title">Title</label>
-                <input required type="text" onChange={(e) => setTitle(e.target.value)} value={title} name="" id="" />
+                <input class="form-control" required type="text" onChange={(e) => setTitle(e.target.value)} value={title} name="" id="" />
                 <label htmlFor="amount">Amount</label>
-                <input required type="number" onChange={(e) => setAmount(e.target.value)} value={amount} name="" id="" />
+                <input class="form-control" required type="number" onChange={(e) => setAmount(e.target.value)} value={amount} name="" id="" />
                 <label htmlFor="date">Date</label>
-                <input required type="date" onChange={(e) => setDate(e.target.value)} value={date} name="" id="" />
+                <input class="form-control" required type="date" onChange={(e) => setDate(e.target.value)} value={date} name="" id="" />
 
                 <label htmlFor="category">Category</label>
-                <select required name="category" onChange={(e) => setCategory(e.target.value)} value={category} id="">
+                <select class="form-control" required name="category" onChange={(e) => setCategory(e.target.value)} value={category} id="">
                     <option value="food">Food & Dining</option>
                     <option value="transportation">Transportation</option>
                     <option value="shopping">Shopping</option>
@@ -47,9 +51,9 @@ function AddExpense() {
                     <option value="travel">Travel</option>
                     <option value="other">other</option>
                 </select>
-                <textarea name="" onChange={(e) => setDescription(e.target.value)} value={description} id=""></textarea>
-                <button type="submit">Add Expense</button>
-                <button type="reset">Cancel</button>
+                <textarea placeholder="description" class="form-control" name="" onChange={(e) => setDescription(e.target.value)} value={description} id=""></textarea>
+                <button className="btn btn-success" type="submit">Add Expense</button>
+                <button className="btn btn-danger" type="reset">Cancel</button>
             </form>
         </div>
     )
