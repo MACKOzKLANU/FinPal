@@ -21,7 +21,3 @@ body {
 .color-logo {
     color: var(--color-logo);
 }
-
-.ml-10 {
-    margin-left: 10px;
-}

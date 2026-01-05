@@ -8,9 +8,9 @@ import { BudgetProvider } from './contexts/BudgetContext.jsx'
 
 // Custom css styles
 
-import './styles/components/AuthLayout.css'
+import './styles/bootstrap.js'
 
-import './styles/globals/variables.css'
+import './styles/bootstrap.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

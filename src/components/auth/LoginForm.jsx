@@ -17,7 +17,7 @@ function LoginForm() {
         }
     }
     return (
-        <div className="">
+        <div className="container-loginForm">
             <h4>Welcome back</h4>
             <p>Sign in to your account</p>
             <div className="">
